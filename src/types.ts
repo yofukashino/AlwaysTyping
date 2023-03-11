@@ -22,7 +22,37 @@ export interface UserTypingStore {
   getTypingUsers: DefaultTypes.AnyFunction;
   isTyping: DefaultTypes.AnyFunction;
 }
-
+export interface User {
+  avatar: string;
+  avatarDecoration: undefined | string;
+  bot: boolean;
+  desktop: boolean;
+  discriminator: string;
+  email: null | string;
+  flags: number;
+  guildMemberAvatars: {
+    [key: number]: string;
+  };
+  hasBouncedEmail: boolean;
+  hasFlag: DefaultTypes.AnyFunction;
+  id: string;
+  isStaff: DefaultTypes.AnyFunction;
+  isStaffPersonal: DefaultTypes.AnyFunction;
+  mfaEnabled: boolean;
+  mobile: boolean;
+  nsfwAllowed: undefined | boolean;
+  personalConnectionId: null | string;
+  phone: null | string;
+  premiumType: undefined | number;
+  premiumUsageFlags: number;
+  publicFlags: number;
+  purchasedFlags: number;
+  system: boolean;
+  username: string;
+  verified: boolean;
+  createdAt: Date;
+  tag: string;
+}
 export interface Settings {
   showAllTyping: boolean;
   customChannels: string;

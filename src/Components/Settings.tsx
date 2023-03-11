@@ -1,7 +1,7 @@
 import { components, util } from "replugged";
 import { PluginLogger, SettingValues } from "../index";
 import { defaultSettings } from "../lib/consts";
-const { SwitchItem, TextInput } = components;
+const { SwitchItem, TextInput, FormItem } = components;
 import * as Types from "../types";
 export const registerSettings = (): void => {
   for (const key in defaultSettings) {
@@ -20,13 +20,22 @@ export const Settings = (): Types.ReactElement => {
         }}>
         Everyone typing
       </SwitchItem>
-      <TextInput
+      <FormItem
         {...{
-          ...util.useSetting(SettingValues, "customChannels", defaultSettings.customChannels),
-          placeholder: "xxxxxxxxxxxxxxxxxx",
-          note: "Show everyone as typing. (Client-side only)",
-        }}
-      />
+          title: "Custom channels",
+          note: "IDs of channels in which AlwaysTyping should send typing status, other than the currently selected channel. - Separated by commas.",
+          notePosition: "after",
+          noteStyle: { marginTop: 16 },
+          divider: true,
+        }}>
+        <TextInput
+          {...{
+            ...util.useSetting(SettingValues, "customChannels", defaultSettings.customChannels),
+            placeholder: "xxxxxxxxxxxxxxxxxx",
+            note: "Show everyone as typing. (Client-side only)",
+          }}
+        />
+      </FormItem>
     </div>
   );
 };

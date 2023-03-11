@@ -1,8 +1,10 @@
 ### AlwaysTyping
 
-Easily rejoin a voice chat you've recently left by clicking on a button.
+Show that you are typing on selected channel.
 
-This plugin is compatible with plugins like Game Activity Toggle.
+Show everyone as typing too. (Client-side only - Togglable in settings).
+
+Download Link:
 
 [Tharki.AlwaysTyping.asar](https://github.com/Tharki-God/AlwaysTyping/releases/latest/download/Tharki.AlwaysTyping.asar)
 
