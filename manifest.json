@@ -1,16 +1,16 @@
 {
-  "id": "dev.replugged.PluginTemplate",
-  "name": "Plugin Template",
-  "description": "A plugin template",
+  "id": "Tharki.AlwaysTyping",
+  "name": "AlwaysTyping",
+  "description": "Show that you are typing on selected channel.",
   "author": {
-    "name": "replugged",
-    "discordID": "1000992611840049192",
-    "github": "replugged-org"
+    "name": "Ahlawat",
+    "discordID": "1025214794766221384",
+    "github": "Tharki-God"
   },
-  "version": "1.0.0",
+  "version": "0.9.0",
   "updater": {
     "type": "github",
-    "id": "replugged-org/plugin-template"
+    "id": "Tharki-God/AlwaysTyping"
   },
   "license": "MIT",
   "type": "replugged-plugin",
