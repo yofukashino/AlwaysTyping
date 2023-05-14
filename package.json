@@ -1,6 +1,6 @@
 {
   "name": "always-typing",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "Show that you are typing on selected channel.",
   "engines": {
     "node": ">=14.0.0"
