@@ -1,13 +1,10 @@
 import { webpack } from "replugged";
 import * as Types from "../types";
 
-export const TypingStore = webpack.getByProps(
-  "startTyping",
-  "stopTyping",
-) as unknown as Types.TypingStore;
+export const TypingStore = webpack.getByProps<Types.TypingStore>("startTyping", "stopTyping");
 
-export const SelectedChannelStore = webpack.getByProps(
+export const SelectedChannelStore = webpack.getByProps<Types.SelectedChannelStore>(
   "getLastSelectedChannelId",
-) as unknown as Types.SelectedChannelStore;
+);
 
-export const UserTypingStore = webpack.getByProps("isTyping") as unknown as Types.UserTypingStore;
+export const UserTypingStore = webpack.getByProps<Types.UserTypingStore>("isTyping");
