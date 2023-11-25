@@ -2,17 +2,17 @@
   "id": "dev.tharki.AlwaysTyping",
   "name": "AlwaysTyping",
   "description": "Show that you are typing on selected channel.",
-  "image": "https://tharki-god.github.io/files-random-host/bdpluginsassets/typing.gif",
-  "source": "https://github.com/Tharki-God/AlwaysTyping",
+  "image": "https://i.imgur.com/nUN50Q8.gif",
+  "source": "https://github.com/TharkiDev/AlwaysTyping",
   "author": {
     "name": "Ahlawat",
     "discordID": "1025214794766221384",
-    "github": "Tharki-God"
+    "github": "TharkiDev"
   },
   "version": "0.9.4",
   "updater": {
     "type": "github",
-    "id": "Tharki-God/AlwaysTyping"
+    "id": "TharkiDev/AlwaysTyping"
   },
   "license": "MIT",
   "type": "replugged-plugin",

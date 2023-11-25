@@ -1,6 +1,5 @@
 import { types as DefaultTypes } from "replugged";
 export { types as DefaultTypes } from "replugged";
-export { ReactElement } from "react";
 
 export interface TypingStore {
   startTyping: DefaultTypes.AnyFunction;
@@ -57,3 +56,5 @@ export interface Settings {
   showAllTyping: boolean;
   customChannels: string;
 }
+
+export * as default from "./types";

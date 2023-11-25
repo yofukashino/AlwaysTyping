@@ -1,7 +1,9 @@
-import { CurrentUser, PluginInjector, SettingValues } from "../index";
+import { users as UltimateUserStore } from "replugged/common";
+import { PluginInjector, SettingValues } from "../index";
 import { SelectedChannelStore, UserTypingStore } from "../lib/requiredModules";
 import { defaultSettings } from "../lib/consts";
-import * as Utils from "../lib/utils";
+import Utils from "../lib/utils";
+
 export const patchUserTypingStore = (): void => {
   PluginInjector.after(UserTypingStore, "isTyping", (_args: [string, string], res: boolean) => {
     const channelIds = [
@@ -10,7 +12,7 @@ export const patchUserTypingStore = (): void => {
     ].filter((n) => n);
     const shouldType = !channelIds.some((channelId) => {
       const typingUsers = Object.keys(UserTypingStore.getTypingUsers(channelId));
-      return typingUsers.includes(CurrentUser.id);
+      return typingUsers.includes(UltimateUserStore.getCurrentUser()?.id);
     });
     if (shouldType) Utils.type();
     return res || SettingValues.get("showAllTyping", defaultSettings.showAllTyping);
