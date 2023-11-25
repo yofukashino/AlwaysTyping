@@ -9,7 +9,7 @@
     "discordID": "1025214794766221384",
     "github": "TharkiDev"
   },
-  "version": "0.9.4",
+  "version": "1.0.0",
   "updater": {
     "type": "github",
     "id": "TharkiDev/AlwaysTyping"
