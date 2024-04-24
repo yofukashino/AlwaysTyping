@@ -1,14 +1,14 @@
 import { SettingValues } from "../index";
 import { defaultSettings } from "./consts";
-import { SelectedChannelStore, TypingStore } from "./requiredModules";
+import Modules from "./requiredModules";
 export const type = (): void => {
   const channelIds = [
     ...SettingValues.get("customChannels", defaultSettings.customChannels).split(","),
-    SelectedChannelStore.getCurrentlySelectedChannelId(),
+    Modules.SelectedChannelStore.getCurrentlySelectedChannelId(),
   ].filter((n) => n);
   if (channelIds.length)
     for (const id of channelIds) {
-      TypingStore.startTyping(id);
+      Modules.TypingUtils.startTyping(id);
     }
 };
 

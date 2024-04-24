@@ -1,10 +1,16 @@
 import { webpack } from "replugged";
-import * as Types from "../types";
+import Types from "../types";
 
-export const TypingStore = webpack.getByProps<Types.TypingStore>("startTyping", "stopTyping");
+const Modules: Types.Modules = {};
 
-export const SelectedChannelStore = webpack.getByProps<Types.SelectedChannelStore>(
-  "getLastSelectedChannelId",
-);
+Modules.loadModules = async () => {
+  Modules.TypingUtils ??= await webpack.waitForProps<Types.TypingUtils>(
+    "startTyping",
+    "stopTyping",
+  );
+  Modules.SelectedChannelStore =
+    webpack.getByStoreName<Types.SelectedChannelStore>("SelectedChannelStore");
+  Modules.TypingStore = webpack.getByStoreName<Types.TypingStore>("TypingStore");
+};
 
-export const UserTypingStore = webpack.getByProps<Types.UserTypingStore>("isTyping");
+export default Modules;

@@ -3,16 +3,16 @@
   "name": "AlwaysTyping",
   "description": "Show that you are typing on selected channel.",
   "image": "https://i.imgur.com/nUN50Q8.gif",
-  "source": "https://github.com/TharkiDev/AlwaysTyping",
+  "source": "https://github.com/YofukashiNo/AlwaysTyping",
   "author": {
-    "name": "Ahlawat",
+    "name": "Nanakusa",
     "discordID": "1121961711080050780",
-    "github": "TharkiDev"
+    "github": "YofukashiNo"
   },
   "version": "1.0.2",
   "updater": {
     "type": "github",
-    "id": "TharkiDev/AlwaysTyping"
+    "id": "YofukashiNo/AlwaysTyping"
   },
   "license": "MIT",
   "type": "replugged-plugin",
